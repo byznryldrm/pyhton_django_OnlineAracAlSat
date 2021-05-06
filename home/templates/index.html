@@ -1,13 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>İlk Django Sayfası</title>
-</head>
-<body>
-<h1>Karabük Üniversitesi</h1>
-<h3>Bilgisayar Mühendisliği</h3>
-<h5>Özel Konular 2 Dersi</h5>
+{% extends "homebase.html" %}
 
-</body>
-</html>
+{% block title %} Index Sayfası {% endblock %}
+{% block keywords %} Index Anahtar Kelime {% endblock %}
+{% block description %} Index Sayfası Acıklama {% endblock %}
+
+{% block slider %}
+    {% include "slider.html" %}
+{% endblock %}
+
+{% block content %}
+    {% include "content.html" %}
+{% endblock %}

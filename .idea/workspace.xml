@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5c676b64-59a6-4b91-bcda-574b8f9dc68a" name="Default Changelist" comment="" />
+    <list default="true" id="5c676b64-59a6-4b91-bcda-574b8f9dc68a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AracIlanProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,6 +49,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/car" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -92,7 +103,10 @@
       <workItem from="1619303344564" duration="2209000" />
       <workItem from="1619382385903" duration="3424000" />
       <workItem from="1619386683346" duration="729000" />
-      <workItem from="1619899163497" duration="6839000" />
+      <workItem from="1619899163497" duration="7219000" />
+      <workItem from="1620245446246" duration="6443000" />
+      <workItem from="1620297640402" duration="3445000" />
+      <workItem from="1620305324414" duration="7909000" />
     </task>
     <servers />
   </component>
@@ -109,5 +123,6 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
 </project>
