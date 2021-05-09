@@ -3,21 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="5c676b64-59a6-4b91-bcda-574b8f9dc68a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AracIlanProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AracIlanProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/car/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/car/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/about-us.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/banner-ads.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/client-brand-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/img/client-brand-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/client-brand-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/img/client-brand-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/promo-banner.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/property-header-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/property-view-2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/signin-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/img/testimonial-bg.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +109,9 @@
       <workItem from="1620245446246" duration="6443000" />
       <workItem from="1620297640402" duration="3445000" />
       <workItem from="1620305324414" duration="8505000" />
-      <workItem from="1620427923455" duration="4795000" />
+      <workItem from="1620427923455" duration="5394000" />
+      <workItem from="1620495206580" duration="6122000" />
+      <workItem from="1620560360050" duration="1464000" />
     </task>
     <servers />
   </component>
