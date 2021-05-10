@@ -1,3 +1,5 @@
+from unicodedata import category
+
 from django.contrib import messages
 from django.http import HttpResponseRedirect
 from django.shortcuts import render
@@ -11,8 +13,9 @@ def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = Car.objects.all()[:5]
     context = {'setting': setting,
+               'category': category,
                'page':'home',
-               'sliderdata':sliderdata
+               'sliderdata': sliderdata,
                }
     return render(request, 'index.html', context)
 

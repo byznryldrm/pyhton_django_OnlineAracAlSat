@@ -3,10 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5c676b64-59a6-4b91-bcda-574b8f9dc68a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AracIlanProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/car/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -107,7 +108,8 @@
       <workItem from="1620305324414" duration="8505000" />
       <workItem from="1620427923455" duration="5394000" />
       <workItem from="1620495206580" duration="6122000" />
-      <workItem from="1620560360050" duration="21175000" />
+      <workItem from="1620560360050" duration="23129000" />
+      <workItem from="1620648766558" duration="10677000" />
     </task>
     <servers />
   </component>
