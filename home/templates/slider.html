@@ -4,6 +4,20 @@
     <div class="aa-slider-area">
       <!-- Top slider -->
       <div class="aa-top-slider">
+        {% for rs in sliderdata %}
+        <!-- Top slider single slide -->
+        <div class="aa-top-slider-single">
+          <img src="{{ rs.image.url }}" alt="img">
+          <!-- Top slider content -->
+          <div class="aa-top-slider-content">
+            <span class="aa-top-slider-catg">{{ rs.title }}</span>
+            <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>{{ rs.description }}</p>
+            <p class="aa-top-slider-price">{{ rs.price }}</p>
+            <a href="/car/{{ rs.id }}/ {{ rs.slug }}" class="aa-top-slider-btn">More <span class="fa fa-angle-double-right"></span></a>
+          </div>
+          <!-- / Top slider content -->
+        </div>
+        {% endfor %}
         <!-- Top slider single slide -->
         <div class="aa-top-slider-single">
           <img src="{% static "img/slider/3.png" %}" alt="img">
@@ -12,7 +26,7 @@
             <span class="aa-top-slider-catg">Mercedes-Benz C 200 d BlueTEC AMG</span>
             <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Turkıye Istanbul</p>
             <p class="aa-top-slider-price">395.650 TL</p>
-            <a href="{% static "#" %}" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+            <a href="{% static "#" %}" class="aa-top-slider-btn">More <span class="fa fa-angle-double-right"></span></a>
           </div>
           <!-- / Top slider content -->
         </div>
@@ -25,7 +39,7 @@
             <span class="aa-top-slider-catg">Audi A4 Sedan 2.0 TDI Design </span>
             <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Turkıye Antalya </p>
             <p class="aa-top-slider-price">405.000 TL</p>
-            <a href="{% static "#" %}" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+            <a href="{% static "#" %}" class="aa-top-slider-btn">More <span class="fa fa-angle-double-right"></span></a>
           </div>
           <!-- / Top slider content -->
         </div>
@@ -38,7 +52,7 @@
             <span class="aa-top-slider-catg">BMW 525i Standart</span>
             <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Turkıye Ankara</p>
             <p class="aa-top-slider-price">232.000 TL</p>
-            <a href="{% static "#" %}" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+            <a href="{% static "#" %}" class="aa-top-slider-btn">More <span class="fa fa-angle-double-right"></span></a>
           </div>
           <!-- / Top slider content -->
         </div>
@@ -51,7 +65,7 @@
             <span class="aa-top-slider-catg">Chevrolet Cruze 1.6 LS </span>
             <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Turkıye Konya</p>
             <p class="aa-top-slider-price">89.500 TL</p>
-            <a href="{% static "#" %}" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+            <a href="{% static "#" %}" class="aa-top-slider-btn">More <span class="fa fa-angle-double-right"></span></a>
           </div>
           <!-- / Top slider content -->
         </div>
@@ -64,7 +78,7 @@
             <span class="aa-top-slider-catg">Ford Fiesta  1.5 TDCi Titanium X  </span>
             <p class="aa-top-slider-location"><i class="fa fa-map-marker"></i>Turkıye Zonguldak</p>
             <p class="aa-top-slider-price">123.750 TL</p>
-            <a href="{% static "#" %}" class="aa-top-slider-btn">Read More <span class="fa fa-angle-double-right"></span></a>
+            <a href="{% static "#" %}" class="aa-top-slider-btn">More <span class="fa fa-angle-double-right"></span></a>
           </div>
           <!-- / Top slider content -->
         </div>
