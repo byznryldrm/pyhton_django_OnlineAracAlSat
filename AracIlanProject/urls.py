@@ -22,13 +22,18 @@ from home import views
 
 urlpatterns = [
     path('', include('home.urls')),
-    path('aboutus/', views.aboutus, name='aboutus'),
-    path('references/', views.references, name='references'),
-    path('contact/', views.contact, name='contact'),
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('home/', include('home.urls')),
     path('car/', include('car.urls')),
     path('admin/', admin.site.urls),
-    path('ckeditor/', include('ckeditor_uploader.urls')),
+
+    path('aboutus/', views.aboutus, name='aboutus'),
+    path('references/', views.references, name='references'),
+    path('contact/', views.contact, name='contact'),
+
+    path('category/<int:id>/<slug:slug>/', views.category_cars, name='category_cars'),
+
+
 ]
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

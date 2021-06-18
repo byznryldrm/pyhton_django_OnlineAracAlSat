@@ -37,19 +37,20 @@ class Setting(models.Model):
     def __str__(self):
         return self.title
 
+
 class ContactFormMessage(models.Model):
     STATUS = (
         ('New', 'New'),
         ('Read', 'Read'),
         ('Closed', 'Closed'),
     )
-    name = models.CharField(blank= True, max_length=20)
-    email = models.CharField(blank= True, max_length=50)
-    subject = models.CharField(blank= True, max_length=50)
-    message = models.CharField(blank= True, max_length=250)
+    name = models.CharField(blank=True, max_length=20)
+    email = models.CharField(blank=True, max_length=50)
+    subject = models.CharField(blank=True, max_length=50)
+    message = models.CharField(blank=True, max_length=250)
     status = models.CharField(max_length=10, choices=STATUS, default='New')
-    ip = models.CharField(blank= True, max_length=50)
-    note = models.CharField(blank= True, max_length=150)
+    ip = models.CharField(blank=True, max_length=50)
+    note = models.CharField(blank=True, max_length=150)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 

@@ -40,31 +40,22 @@
 
         </div>
       <div id="navbar" class="navbar-collapse collapse">
+      {% load mptt_tags %}
           <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
-          <li><a href="/">HOME</a></li>
-          <li>
-          {% load mptt_tags %}
-          {% recursetree category %}
-            <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="/category/{{ node.slug }}"> {{ node.title }} <span class="caret"></span></a>
-                {% if not node.is_leaf_node %}
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="/category/{{ node.slug }}"> {{ children }} </a></li>
-                    </ul>
-                {% endif %}
-            </li>
-          {% endrecursetree %}
-          </li>
-             <li class="dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown" href="{% static "properties.html" %}"> CAR CATEGORY <span class="caret"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="{% static "properties.html" %}">OTOMOBİL</a></li>
-                <li><a href="{% static "properties-detail.html" %}">ARAZİ, SUV & PİCKUP</a></li>
-                <li><a href="{% static "properties-detail.html" %}">MOTOSİKLET</a></li>
-                <li><a href="{% static "properties-detail.html" %}">ELEKTRİKLİ ARAÇLAR</a></li>
-                <li><a href="{% static "properties-detail.html" %}">TİCARİ ARAÇLAR</a></li>
-              </ul>
-            </li>
+            <li><a href="/">HOME</a></li>
+					{% recursetree category %}
+						{% if node.is_leaf_node %}
+						    <li><a class="dropdown" href="/category/{{ node.id }}/child">{{ node.title }}</a></li>
+                        {% endif %}
+                        {% if not node.is_leaf_node %}
+							<li class="dropdown">
+								<a href="/category/{{ node.id }}/parent">{{ node.title }}</a>
+								<ul class="dropdown-menu" role="menu">{{ children }}</ul>
+							</li>
+						{% endif %}
+					{% endrecursetree %}
+
+
             <li><a href="/aboutus">ABOUT US</a></li>
             <li><a href="/contact">CONTACT</a></li>
             <li><a href="/references">REFERENCES</a></li>

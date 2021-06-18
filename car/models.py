@@ -6,6 +6,7 @@ from ckeditor_uploader.fields import RichTextUploadingField
 from mptt.admin import MPTTModelAdmin
 from mptt.models import MPTTModel
 
+
 class Category(MPTTModel):
     STATUS = (
         ('True', 'Evet'),
@@ -63,7 +64,7 @@ class Car(models.Model):
 
 
 class Images(models.Model):
-    car =models.ForeignKey(Car, on_delete=models.CASCADE)
+    car = models.ForeignKey(Car, on_delete=models.CASCADE)
     title = models.CharField(max_length=50, blank=True)
     image = models.ImageField(blank=True, upload_to='images/')
 
