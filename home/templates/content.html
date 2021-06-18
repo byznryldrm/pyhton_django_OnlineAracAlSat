@@ -9,57 +9,27 @@
           {% load static %}
         <div class="aa-latest-properties-content">
           <div class="row">
+            {% for rs in lastcars %}
             <div class="col-md-4">
               <article class="aa-properties-item">
-                <a href="{% static "#" %}" class="aa-properties-item-img">
-                  <img src="{% static "img/item/1.png" %}" alt="img">
-                </a>
+                 <a href="/car/{{rs.id}}/{{rs.slug}}" class="aa-properties-item-img">
+                     <img src="{{rs.image.url}}" alt="img">
+                 </a>
                 <div class="aa-properties-item-content">
+                  <h5><a href="/car/{{rs.id}}/{{rs.slug}}">{{rs.title}}</a></h5>
                   <div class="aa-properties-info">
-                    <span>Yıl: 2004</span>
-                    <span>Yakıt: Benzin</span>
-                    <span>Vites: Otomatik</span>
-                    <span>Km: 145.000</span>
-                    <span>Kasa Tipi: Sedan</span>
-                    <span>Renk: Siyah</span>
-                    <span>Durumu: İkinci El</span>
+                    {{ rs.description }}
                   </div>
                   <div class="aa-properties-detial">
                     <span class="aa-price">
-                      232.000TL
+                      {{rs.price}}₺
                     </span>
                     <a href="{% static "#" %}" class="aa-secondary-btn">Details</a>
                   </div>
                 </div>
               </article>
             </div>
-            <div class="col-md-4">
-              <article class="aa-properties-item">
-                <a href="{% static "#" %}" class="aa-properties-item-img">
-                  <img src="{% static "img/item/2.png" %}" alt="img">
-                </a>
-                <div class="aa-tag for-rent">
-                  For Rent
-                </div>
-                <div class="aa-properties-item-content">
-                  <div class="aa-properties-info">
-                   <span>Yıl: 2016</span>
-                    <span>Yakıt: Dizel</span>
-                    <span>Vites: Yarı Otomatik</span>
-                    <span>Km: 100.000</span>
-                    <span>Kasa Tipi: Sedan</span>
-                    <span>Renk: Siyah</span>
-                    <span>Durumu: İkinci El</span>
-                  </div>
-                  <div class="aa-properties-detial">
-                    <span class="aa-price">
-                      405.000TL
-                    </span>
-                    <a href="{% static "#" %}" class="aa-secondary-btn">Details</a>
-                  </div>
-                </div>
-              </article>
-            </div>
+            {% endfor %}
             <div class="col-md-4">
               <article class="aa-properties-item">
                 <a href="{% static "#" %}" class="aa-properties-item-img">

@@ -13,12 +13,13 @@ def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = Car.objects.all()[:5]
     category = Category.objects.all()
-
+    lastcars = Car.objects.all().order_by('-id')[:4]
     context = {'setting': setting,
                'category': category,
                'page': 'home',
                'car': car,
-               'sliderdata': sliderdata}
+               'sliderdata': sliderdata,
+               'lastcars': lastcars}
     return render(request, 'index.html', context)
 
 
