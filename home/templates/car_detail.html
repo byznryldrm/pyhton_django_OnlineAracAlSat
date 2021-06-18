@@ -1,0 +1,155 @@
+{% extends 'homebase.html' %}
+{% block title %} {{car.title}} {{ setting.company }} {% endblock %}
+{% block keywords %} {{ car.keywords }} {% endblock %}
+{% block description %} {{ car.description }} {% endblock %}
+{% block head %}
+<link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+{% block content %}
+  <!-- Start Proerty header  -->
+  <section >
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div>
+            <ol class="breadcrumb">
+            <li><a href="/">HOME</a></li>
+            <li><a href="/category/{{ car.category_id }}/{{ car.category.slug }}">{{ car.category }}</a></li>
+            <li class="active">{{car.title}}</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Proerty header  -->
+  <!-- Start Properties  -->
+  <section id="aa-properties">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="aa-properties-content">
+            <!-- Start properties content body -->
+            <div class="aa-properties-details">
+             <div class="aa-properties-details-img">
+               <img src="{{ car.image.url }}" alt="img">
+               {% for rs in images %}
+               <img src="{{rs.image.url}}" alt="img">
+               {% endfor %}
+             </div>
+             <div class="aa-properties-info">
+               <h2>{{car.title}}</h2>
+               <span class="aa-price">{{ car.price}}₺ </span>
+               <p> {{ car.description }}</p>
+               <p> {{ car.detail | safe }}</p>
+             </div>
+             <!-- Properties social share -->
+             <div class="aa-properties-social">
+               <ul>
+                 <li>Share</li>
+                 <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                 <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                 <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                 <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+               </ul>
+             </div>
+            </div>
+          </div>
+        </div>
+        <!-- Start properties sidebar -->
+        <div class="col-md-4">
+          <aside class="aa-properties-sidebar">
+            <!-- Start Single properties sidebar -->
+            <div class="aa-properties-single-sidebar">
+              <h3>Properties Search</h3>
+              <form action="">
+                <div class="aa-single-advance-search">
+                  <input type="text" placeholder="Type Your Location">
+                </div>
+                <div class="aa-single-advance-search">
+                  <select id="" name="">
+                   <option selected="" value="0">Category</option>
+                    <option value="1">Flat</option>
+                    <option value="2">Land</option>
+                    <option value="3">Plot</option>
+                    <option value="4">Commercial</option>
+                  </select>
+                </div>
+                <div class="aa-single-advance-search">
+                  <select id="" name="">
+                    <option selected="" value="0">Type</option>
+                    <option value="1">Flat</option>
+                    <option value="2">Land</option>
+                    <option value="3">Plot</option>
+                    <option value="4">Commercial</option>
+                  </select>
+                </div>
+                <div class="aa-single-advance-search">
+                  <select id="" name="">
+                    <option selected="" value="0">Type</option>
+                    <option value="1">Flat</option>
+                    <option value="2">Land</option>
+                    <option value="3">Plot</option>
+                    <option value="4">Commercial</option>
+                  </select>
+                </div>
+                <div class="aa-single-filter-search">
+                  <span>AREA (SQ)</span>
+                  <span>FROM</span>
+                  <span id="skip-value-lower" class="example-val">30.00</span>
+                  <span>TO</span>
+                  <span id="skip-value-upper" class="example-val">100.00</span>
+                  <div id="aa-sqrfeet-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                  </div>
+                </div>
+                <div class="aa-single-filter-search">
+                  <span>PRICE ($)</span>
+                  <span>FROM</span>
+                  <span id="skip-value-lower2" class="example-val">30.00</span>
+                  <span>TO</span>
+                  <span id="skip-value-upper2" class="example-val">100.00</span>
+                  <div id="aa-price-range" class="noUi-target noUi-ltr noUi-horizontal noUi-background">
+                  </div>
+                </div>
+                <div class="aa-single-advance-search">
+                  <input type="submit" value="Search" class="aa-search-btn">
+                </div>
+              </form>
+            </div>
+            <!-- Start Single properties sidebar -->
+            <div class="aa-properties-single-sidebar">
+              <h3>Populer Properties</h3>
+              <div class="media">
+                {% for rs in lastcars %}
+            <div class="col-md-4">
+              <article class="aa-properties-item">
+                 <a href="/car/{{rs.id}}/{{rs.slug}}" class="aa-properties-item-img">
+                     <img src="{{rs.image.url}}" alt="img">
+                 </a>
+                <div class="aa-properties-item-content">
+                  <h5><a href="/car/{{rs.id}}/{{rs.slug}}">{{rs.title}}</a></h5>
+                  <div class="aa-properties-info">
+                    {{ rs.description }}
+                  </div>
+                  <div class="aa-properties-detial">
+                    <span class="aa-price">
+                      {{rs.price}}₺
+                    </span>
+                    <a href="/car/{{ rs.id }}/{{ rs.slug }}" class="aa-secondary-btn">Details</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+            {% endfor %}
+           </div>
+
+              </div>
+          </aside>
+      </div>
+    </div>
+    </div>
+  </section>
+  <!-- / Properties  -->
+
+{% endblock %}

@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 # Create your views here.
 import car
-from car.models import Car, Category
+from car.models import Car, Category, Images
 from home.models import Setting, ContactForm, ContactFormMessage
 
 
@@ -66,3 +66,20 @@ def category_cars(request, id, slug):
                'categorydata ': categorydata,
                }
     return render(request, 'cars.html', context)
+
+
+def car_detail(request,id,slug):
+    category = Category.objects.all()
+    car = Car.objects.get(pk=id)
+    images = Images.objects.filter(car_id=id)
+    lastcars = Car.objects.all().order_by('-id')[:4]
+    setting = Setting.objects.get(pk=1)
+    context = {
+        'car': car,
+        'category': category,
+        'images': images,
+        'lastcars': lastcars,
+        'setting': setting
+        }
+    return render(request, 'car_detail.html', context)
+

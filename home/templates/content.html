@@ -2,11 +2,7 @@
   <section id="aa-latest-property">
     <div class="container">
       <div class="aa-latest-property-area">
-        <div class="aa-title">
-          <h2>Latest Properties</h2>
-          <span></span>
-        </div>
-          {% load static %}
+        {% load static %}
         <div class="aa-latest-properties-content">
           <div class="row">
             {% for rs in lastcars %}
@@ -24,7 +20,7 @@
                     <span class="aa-price">
                       {{rs.price}}₺
                     </span>
-                    <a href="{% static "#" %}" class="aa-secondary-btn">Details</a>
+                    <a href="/car/{{ rs.id }}/{{ rs.slug }}" class="aa-secondary-btn">Details</a>
                   </div>
                 </div>
               </article>

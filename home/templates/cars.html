@@ -88,18 +88,18 @@
           <aside class="aa-properties-sidebar">
             <!-- Start Single properties sidebar -->
             <div class="aa-properties-single-sidebar">
-              <h3>Populer Properties</h3>
-              {% for rs in cars %}
+              <h3>Last Car</h3>
+              {% for rs in lastcars %}
               <div class="media">
                 <div class="media-left">
-                  <a href="#">
+                  <a href="/car/{{rs.id}}/{{rs.slug}}">
                     <img src="{{ rs.image.url }}" alt="img">
                   </a>
                 </div>
                 <div class="media-body">
-                  <h4 class="media-heading"><a href="#">{{ rs.title }}</a></h4>
+                  <h4 class="media-heading"><a href="/car/{{rs.id}}/{{rs.slug}}">{{ rs.title }}</a></h4>
                   <p>{{ rs.description }}</p>
-                  <span>{{ rs.price }}</span>
+                  <span>{{rs.price}}₺</span>
                 </div>
               </div>
               {% endfor %}
