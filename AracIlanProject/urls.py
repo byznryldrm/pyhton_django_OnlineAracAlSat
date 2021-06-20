@@ -35,6 +35,9 @@ urlpatterns = [
     path('car/<int:id>/<slug:slug>/', views.car_detail, name='car_detail'),
     path('search/', views.car_search, name='car_search'),
     path('search_auto/', views.car_search_auto, name='car_search_auto'),
+    path('logout/', views.logout_view, name='logout_view'),
+    path('login/', views.login_view, name='login_view'),
+    path('signup/', views.signup_view, name='signup_view'),
 
 
 ]

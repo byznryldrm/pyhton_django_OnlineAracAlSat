@@ -1,5 +1,7 @@
 
+
 from django.contrib import messages
+from django.contrib.auth import logout, authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
 from django.core.serializers import json
@@ -119,4 +121,49 @@ def car_search_auto(request):
         data = 'fail'
     mimetype = 'application/json'
     return HttpResponse(data, mimetype)
+
+
+def logout_view(request):
+    logout(request)
+    return HttpResponseRedirect('/')
+
+
+def login_view(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        user = authenticate(request, email=email, password=password)
+        if user is not None:
+            login(request, user)
+            return HttpResponseRedirect('/')
+        else:
+            messages.warning(request, "Kullanıcı adı veya şifre hatalı!")
+            return HttpResponseRedirect('/login')
+    category = Category.objects.all()
+    context = {'category': category}
+    return render(request, 'login.html', context)
+
+
+def signup_view(request):
+    if request.method == 'POST':
+        form = SignUpForm(request.POST)
+        if form.is_valid():
+            form.save()
+            username = form.cleaned_data.get('username')
+            password = form.cleaned_data.get('password1')
+            user = authenticate(username=username, password=password)
+            login(request, user)
+            #otomatik profil oluşturma
+            current_user = request.user
+            data = UserProfile()
+            data.user_id = current_user.id
+            data.image = "images/users/womanavatar.png"
+            data.save()
+            messages.success(request, "Hoşgeldiniz... Hesabınız oluşturulmuştur.")
+            return HttpResponseRedirect('/')
+    form = SignUpForm()
+    category = Category.objects.all()
+    context = {'category': category,
+               'form': form}
+    return render(request, 'signup.html', context)
 

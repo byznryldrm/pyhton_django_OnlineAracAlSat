@@ -1,29 +1,3 @@
-<!-- Start header section -->
-  <header id="aa-header">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="aa-header-area">
-            <div class="row">
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                <div class="aa-header-left">
-
-                </div>
-              </div>
-              <div class="col-md-6 col-sm-6 col-xs-6">
-                  {% load static %}
-                <div class="aa-header-right">
-                  <a href="{% static 'register.html' %}" class="aa-register">Register</a>
-                  <a href="{% static 'signin.html' %}" class="aa-login">Login</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- End header section -->
 
   <!-- Start menu section -->
   <section id="aa-menu-area">
@@ -55,10 +29,25 @@
 						{% endif %}
 					{% endrecursetree %}
 
-
             <li><a href="/aboutus">ABOUT US</a></li>
             <li><a href="/contact">CONTACT</a></li>
             <li><a href="/references">REFERENCES</a></li>
+            <li>
+				{% if user.id is not None %}
+				<a>{{user.first_name}} {{user.last_name}}</a>
+				<img src="{{request.user.profile.image.url}}">
+					<ul>
+						<li><a href="/user">Hesabım</a></li>
+						<li><a href="/user/contents">İçeriklerim</a></li>
+						<li><a href="/user/comments">Yorumlarım</a></li>
+						<li><a href="/user/advertisements">İlanlarım</a></li>
+						<li><a href="/logout">Çıkış Yap</a></li>
+					</ul>
+                {% else %}
+                    <a href="/signup/" class="aa-register">Register</a>
+                    <a href="/login/" class="aa-login">Login</a>
+				{% endif %}
+			</li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
