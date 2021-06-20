@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c676b64-59a6-4b91-bcda-574b8f9dc68a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/home/templates/car_detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/home/templates/cars_search.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/AracIlanProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/cars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -118,7 +118,8 @@
       <workItem from="1624018968106" duration="55000" />
       <workItem from="1624019437392" duration="5048000" />
       <workItem from="1624038547154" duration="501000" />
-      <workItem from="1624040632204" duration="9019000" />
+      <workItem from="1624040632204" duration="9461000" />
+      <workItem from="1624179837571" duration="5234000" />
     </task>
     <servers />
   </component>

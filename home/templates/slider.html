@@ -95,63 +95,41 @@
         <div class="form">
          <div class="aa-advance-search-top">
             <div class="row">
-              <div class="col-md-4">
+              <form action="/search/" method="post">
+                  {% csrf_token %}
+              <div class="col-md-8">
                 <div class="aa-single-advance-search">
-                  <input type="text" placeholder="Arama">
+                  <input name="query"  type="text" placeholder="Search">
                 </div>
               </div>
               <div class="col-md-2">
                 <div class="aa-single-advance-search">
-                  <select>
-                   <option value="0" selected>Kategori</option>
-                    <option value="1">Otomobil</option>
-                    <option value="2">Arazi,SUV & Pickup</option>
-                    <option value="3">Motosiklet</option>
-                    <option value="4">Elektrikli Araçlar</option>
-                    <option value="5">Ticari Araçlar</option>
-                  </select>
+                   <select name="catid" class="input search-categories">
+                   <option value="0" selected>Category</option>
+                   {% load mptt_tags %}
+                   <ul id="top-menu" class="nav navbar-nav navbar-right aa-main-nav">
+					{% recursetree category %}
+						{% if node.is_leaf_node %}
+						    <option value="{{node.id}}">{{node.title}}</option>
+                        {% endif %}
+                        {% if not node.is_leaf_node %}
+							<optgroup label="{{node.title}}">
+
+                            {{children}}
+
+                            </optgroup>
+						{% endif %}
+					{% endrecursetree %}
+                   </ul>
+                   </select>
                 </div>
-              </div>
-              <div class="col-md-2">
-                 <div class="aa-single-advance-search">
-                  <select>
-                    <option value="0" selected>Marka</option>
-                    <option value="1">Audi</option>
-                    <option value="2">BMW</option>
-                    <option value="3">Chevrolet</option>
-                    <option value="4">Dacia</option>
-                    <option value="5">Ferrari</option>
-                    <option value="6">Fiat</option>
-                    <option value="7">Ford</option>
-                    <option value="8">Hyundai</option>
-                    <option value="9">Mercedes-Benz</option>
-                    <option value="10">Opel</option>
-                  </select>
-              </div>
-              </div>
-              <div class="col-md-2">
-                 <div class="aa-single-advance-search">
-                  <select>
-                    <option value="0" selected>Nerede</option>
-                    <option value="1">Adana</option>
-                    <option value="2">Adıyaman</option>
-                    <option value="3">Afyonkarahisar</option>
-                    <option value="4">Ağrı</option>
-                    <option value="5">Aksaray</option>
-                    <option value="6">Amasya</option>
-                    <option value="7">Ankara</option>
-                    <option value="8">Bartın</option>
-                    <option value="9">Bolu</option>
-                    <option value="10">İstanbul</option>
-                    <option value="10">İzmir</option>
-                  </select>
-              </div>
               </div>
               <div class="col-md-2">
                 <div class="aa-single-advance-search">
                   <input class="aa-search-btn" type="submit" value="Search">
                 </div>
               </div>
+              </form>
             </div>
           </div>
         </div>
