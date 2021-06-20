@@ -1,7 +1,8 @@
 
 from django.contrib import messages
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render
+from django.core.serializers import json
 
 # Create your views here.
 import car
@@ -102,4 +103,20 @@ def car_search(request):
                        'setting': setting}
             return render(request, 'cars_search.html', context)
     return HttpResponseRedirect('/')
+
+
+def car_search_auto(request):
+    if request.is_ajax():
+        q = request.GET.get('term','')
+        car = Car.objects.filter(title__icontains=q)
+        results = []
+        for rs in car:
+            car_json = {}
+            car_json = rs.title
+            results.append(car_json)
+        data = json.dumps(results)
+    else:
+        data = 'fail'
+    mimetype = 'application/json'
+    return HttpResponse(data, mimetype)
 
