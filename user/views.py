@@ -44,3 +44,23 @@ def user_update(request):
             'profile_form': profile_form,
             }
         return render(request, 'user_update.html', context)
+
+
+def change_password(request):
+    if request.method == 'POST':
+        form = PasswordChangeForm(request.user, request.POST)
+        if form.is_valid():
+            user = form.save()
+            update_session_auth_hash(request, user)
+            messages.success(request, 'Şifre Başarıyla Değiştirildi')
+            return HttpResponseRedirect('/user')
+        else:
+            messages.error(request, 'Lütfen Aşağıdaki Hatayı Düzeltin <br>'+ str (form.errors))
+            return HttpResponseRedirect('/user/password')
+    else:
+        category = Category.objects.all()
+        setting = Setting.objects.get(pk=1)
+        form = PasswordChangeForm(request.user)
+        return render(request, 'change_password.html', {
+            'form': form, 'category': category, 'setting': setting}
+        )
