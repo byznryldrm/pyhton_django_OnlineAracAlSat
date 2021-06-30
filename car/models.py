@@ -18,7 +18,7 @@ class Category(MPTTModel):
     description = models.CharField(max_length=255)
     image = models.ImageField(blank=True, upload_to='images/')
     status = models.CharField(max_length=10, choices=STATUS)
-    slug = models.SlugField(null=False, unique=True)
+    slug = models.SlugField(null=False)
     parent = models.ForeignKey('self', blank=True, null=True, related_name='children', on_delete=models.CASCADE)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
@@ -54,7 +54,7 @@ class Car(models.Model):
     image = models.ImageField(blank=True, upload_to='images/')
     price = models.FloatField()
     detail = RichTextUploadingField()
-    slug = models.SlugField(null=False, unique=True)
+    slug = models.SlugField(null=False)
     status = models.CharField(max_length=10, choices=STATUS)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
@@ -68,6 +68,7 @@ class Car(models.Model):
 
     def get_absolute_url(self):
         return reverse('car_detail', kwargs={'slug': self.slug})
+
 
 class Images(models.Model):
     car = models.ForeignKey(Car, on_delete=models.CASCADE)

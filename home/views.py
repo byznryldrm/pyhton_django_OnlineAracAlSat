@@ -9,7 +9,7 @@ from django.core.serializers import json
 import car
 from car.models import Car, Category, Images
 from home.forms import SearchForm, SignUpForm
-from home.models import Setting, ContactForm, ContactFormMessage, UserProfile
+from home.models import Setting, ContactFormu, ContactFormMessage, UserProfile
 
 
 def index(request):
@@ -42,7 +42,7 @@ def references(request):
 
 def contact(request):
     if request.method == 'POST':
-        form = ContactForm(request.POST)
+        form = ContactFormu(request.POST)
         if form.is_valid():
             data = ContactFormMessage()
             data.name = form.cleaned_data['name']
@@ -55,7 +55,7 @@ def contact(request):
             return HttpResponseRedirect('/contact')
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    form = ContactForm()
+    form = ContactFormu()
     context = {'setting': setting, 'form': form, 'category': category}
     return render(request, 'contact.html', context)
 
@@ -108,7 +108,7 @@ def car_search(request):
 
 def car_search_auto(request):
     if request.is_ajax():
-        q = request.GET.get('term','')
+        q = request.GET.get('term', '')
         car = Car.objects.filter(title__icontains=q)
         results = []
         for rs in car:

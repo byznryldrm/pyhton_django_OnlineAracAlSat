@@ -4,7 +4,7 @@ from django.db import models
 from ckeditor_uploader.fields import RichTextUploadingField
 
 # Create your models here.
-from django.forms import ModelForm
+from django.forms import ModelForm, TextInput, Textarea
 from django.utils.safestring import mark_safe
 
 
@@ -49,10 +49,10 @@ class ContactFormMessage(models.Model):
     name = models.CharField(blank=True, max_length=20)
     email = models.CharField(blank=True, max_length=50)
     subject = models.CharField(blank=True, max_length=50)
-    message = models.CharField(blank=True, max_length=250)
+    message = models.CharField(blank=True, max_length=255)
     status = models.CharField(max_length=10, choices=STATUS, default='New')
-    ip = models.CharField(blank=True, max_length=50)
-    note = models.CharField(blank=True, max_length=150)
+    ip = models.CharField(blank=True, max_length=20)
+    note = models.CharField(blank=True, max_length=100)
     create_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
 
@@ -60,25 +60,31 @@ class ContactFormMessage(models.Model):
         return self.name
 
 
-class ContactForm(ModelForm):
+class ContactFormu(ModelForm):
     class Meta:
         model = ContactFormMessage
         fields = ['name', 'email', 'subject', 'message']
+        widgets = {
+            'name': TextInput(attrs={'class': 'form-group', 'placeholder': 'Name & Surname'}),
+            'subject': TextInput(attrs={'class': 'form-group', 'placeholder': 'Subject'}),
+            'email': TextInput(attrs={'class': 'form-group', 'placeholder': 'Email Address'}),
+            'message': Textarea(attrs={'class': 'form-group', 'placeholder': 'Your Message', 'rows': '5'}),
+        }
 
 
 class UserProfile(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE)
-    phone = models.CharField(blank=True, max_length=15)
-    address = models.CharField(blank=True, max_length=100)
-    city = models.CharField(blank=True, max_length=50)
+    user = models.OneToOneField(User,on_delete=models.CASCADE)
+    phone = models.CharField(blank=True,max_length=20)
+    address = models.CharField(blank=True,max_length=150)
+    city = models.CharField(blank=True,max_length=20)
     country = models.CharField(blank=True, max_length=20)
-    image = models.ImageField(blank=True, upload_to='images/users/')
+    image = models.ImageField(blank=True,upload_to='images/users/')
 
     def __str__(self):
         return self.user.username
 
     def user_name(self):
-        return self.user.first_name + ' ' + self.user.last_name + ' [ ' + self.user.username + ' ] '
+        return '[' + self.user.username + '] ' + self.user.first_name + ' ' + self.user.last_name
 
     def image_tag(self):
         return mark_safe('<img src="{}" height="50"/>'.format(self.image.url))
