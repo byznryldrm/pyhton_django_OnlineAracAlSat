@@ -1,5 +1,4 @@
 
-
 from django.contrib import messages
 from django.contrib.auth import logout, authenticate, login
 from django.http import HttpResponseRedirect, HttpResponse
@@ -9,8 +8,8 @@ from django.core.serializers import json
 # Create your views here.
 import car
 from car.models import Car, Category, Images
-from home.forms import SearchForm
-from home.models import Setting, ContactForm, ContactFormMessage
+from home.forms import SearchForm, SignUpForm
+from home.models import Setting, ContactForm, ContactFormMessage, UserProfile
 
 
 def index(request):
@@ -130,9 +129,9 @@ def logout_view(request):
 
 def login_view(request):
     if request.method == 'POST':
-        email = request.POST['email']
+        username = request.POST['username']
         password = request.POST['password']
-        user = authenticate(request, email=email, password=password)
+        user = authenticate(request, username=username, password=password)
         if user is not None:
             login(request, user)
             return HttpResponseRedirect('/')
@@ -160,7 +159,7 @@ def signup_view(request):
             data.image = "images/users/womanavatar.png"
             data.save()
             messages.success(request, "Hoşgeldiniz... Hesabınız oluşturulmuştur.")
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('Sign up')
     form = SignUpForm()
     category = Category.objects.all()
     context = {'category': category,

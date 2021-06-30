@@ -26,11 +26,11 @@
                     </div>
                  {% endfor %}
               {% endif %}
-              <form class="contactform">
+              <form class="contactform" method="post">
                   {% csrf_token %}
                 <div class="aa-single-field">
-                  <label for="email">Email <span class="required">*</span></label>
-                  <input type="email" required="required" aria-required="true" value="" name="email">
+                  <label for="username">Username <span class="required">*</span></label>
+                  <input type="text" id="username" required="required" aria-required="true" value="" name="username">
                 </div>
                 <div class="aa-single-field">
                   <label for="password">Password <span class="required">*</span></label>
