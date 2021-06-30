@@ -159,7 +159,7 @@ def signup_view(request):
             data.image = "images/users/womanavatar.png"
             data.save()
             messages.success(request, "Hoşgeldiniz... Hesabınız oluşturulmuştur.")
-            return HttpResponseRedirect('Sign up')
+            return HttpResponseRedirect('signup')
     form = SignUpForm()
     category = Category.objects.all()
     context = {'category': category,

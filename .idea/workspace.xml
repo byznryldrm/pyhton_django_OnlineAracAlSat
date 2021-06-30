@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c676b64-59a6-4b91-bcda-574b8f9dc68a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0011_auto_20210618_1947.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0012_auto_20210618_2126.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0013_alter_category_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0014_alter_car_slug.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0015_auto_20210620_1526.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AracIlanProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/AracIlanProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
     </list>
@@ -53,7 +53,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/home/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/user" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -64,6 +64,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Casper\Desktop\Django\AracIlanProject\user" />
       <recent name="C:\Users\Casper\Desktop\Django\AracIlanProject\home\templates" />
       <recent name="C:\Users\Casper\Desktop\Django\AracIlanProject\car" />
     </key>
@@ -129,7 +130,7 @@
       <workItem from="1625048135876" duration="4823000" />
       <workItem from="1625054671729" duration="2740000" />
       <workItem from="1625057458569" duration="4378000" />
-      <workItem from="1625075430518" duration="2422000" />
+      <workItem from="1625075430518" duration="15034000" />
     </task>
     <servers />
   </component>

@@ -1,0 +1,58 @@
+{% extends 'homebase.html' %}
+{% block title %} User Profile - {{ setting.company }} {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <!-- Start Proerty header  -->
+    <section >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <ol class="breadcrumb">
+                            <li><a href="/">HOME</a></li>
+                            <li><a href="#">USER PROFILE </a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="aa-properties">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <aside class="aa-properties-sidebar">
+                        <!-- Start Single properties sidebar -->
+                        <div class="aa-properties-single-sidebar">
+                            {% include "user_panel.html" %}
+                        </div>
+                    </aside>
+                </div>
+                <div class="col-md-8">
+                    <h5 class="text-uppercase"><strong>User Profile</strong></h5><br><br>
+                    <div>
+                        <img  style="text-align: center" height="200" width="200" src="{{user.userprofile.image.url}}" alt="">
+                        <form method="POST">
+                            {% csrf_token %}
+                            <fieldset class="form-group">
+                                {{user_form.as_p}}
+                                {{profile_form.as_p}}
+                            </fieldset>
+                            <div class="form-group">
+                                <button type="submit" class="button light-blue">Update</button>
+                            </div>
+                        </form>
+                    </div> <!-- end .general-column -->
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- / Properties  -->
+
+{% endblock %}
