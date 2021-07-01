@@ -1,0 +1,78 @@
+{% extends 'homebase.html' %}
+{% block title %} User Profile  {% endblock %}
+{% block keywords %} {{ setting.keywords }} {% endblock %}
+{% block description %} {{ setting.description }} {% endblock %}
+{% block head %}
+    <link rel='shortcut icon' type='image/x-icon' href='{{setting.icon.url}}' />
+{% endblock %}
+
+{% block content %}
+    {% load static %}
+    <!-- Start Proerty header  -->
+    <section >
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div>
+                        <ol class="breadcrumb">
+                            <li><a href="/">HOME</a></li>
+                            <li><a href="#">USER PROFILE </a></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="aa-properties">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <aside class="aa-properties-sidebar">
+                        <!-- Start Single properties sidebar -->
+                        <div class="aa-properties-single-sidebar">
+                            {% include "user_panel.html" %}
+                        </div>
+                    </aside>
+
+                </div>
+                <div class="col-lg-6 col-lx-4">
+                    <div class="single_confirmation_details">
+                        <table class="table table-inbox">
+                            <thead>
+                            <tr>
+
+                                <th class="text-left">Araç </th>
+                                <th class="text-left">Title </th>
+                                <th class="text-left">Description </th>
+                                <th class="text-left">Slug </th>
+                                <th class="text-left">Price </th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for rs in lastcars %}
+                                <tr>
+                                    <td class="text-left">
+                                        <a href="/car/{{ rs.car_id }}/{{ rs.car.slug }}">
+                                            <strong>{{ rs.car.title }} </strong>
+                                        </a>
+                                    </td>
+                                    <td class="text-left">{{ rs.description }}</td>
+                                    <td class="text-left">{{ rs.status }}</td>
+                                    <td class="text-center">{{ rs.slug }}</td>
+                                    <td class="text-center">{{ rs.price }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </section>
+    <!-- / Properties  -->
+
+{% endblock %}

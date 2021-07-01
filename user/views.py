@@ -115,3 +115,18 @@ def addtreatmenttoadmin(request, id):
             url = request.META.get('HTTP_REFERER')  # get last url
             return HttpResponseRedirect(url)
     return HttpResponseRedirect(url)
+
+
+@login_required(login_url='/login')
+def ilanlarim(request):
+    current_user = request.user
+    profile = UserProfile.objects.get(user_id=current_user.id)
+    category = Category.objects.all()
+    setting = Setting.objects.get(pk=1)
+    lastcars = Car.objects.all().order_by('-id')[:4]
+    context = {'category': category,
+               'setting': setting,
+               'profile': profile,
+               'lastcars': lastcars,
+               }
+    return render(request, 'ilanlarim.html', context)

@@ -2,116 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5c676b64-59a6-4b91-bcda-574b8f9dc68a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/user/templates/add_car.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/AracİlanProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AracİlanProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/user/templates/ilanlarim.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AracIlanProject/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/asgi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AracIlanProject/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AracIlanProject/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/AracIlanProject/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/AracIlanProject/wsgi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/car/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0002_car.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0002_car.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0003_auto_20210508_0250.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0003_auto_20210508_0250.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0004_alter_images_title.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0004_alter_images_title.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0005_alter_car_detail.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0005_alter_car_detail.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0006_car_slug.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0006_car_slug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0007_car_parent.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0007_car_parent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0008_auto_20210510_1545.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0008_auto_20210510_1545.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0009_auto_20210613_1954.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0009_auto_20210613_1954.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0010_delete_categoryadmin.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0010_delete_categoryadmin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0011_auto_20210630_1659.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0011_auto_20210630_1659.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0012_alter_car_slug.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0012_alter_car_slug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0013_alter_car_slug.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0013_alter_car_slug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0014_alter_category_slug.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0014_alter_category_slug.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/migrations/0015_alter_car_slug.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/migrations/0015_alter_car_slug.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0001_initial.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0002_car.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0003_auto_20210508_0250.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0004_alter_images_title.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0005_alter_car_detail.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0006_car_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0007_car_parent.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0008_auto_20210510_1545.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0009_auto_20210613_1954.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0010_delete_categoryadmin.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0011_auto_20210630_1659.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0012_alter_car_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0013_alter_car_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0014_alter_category_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0015_alter_car_slug.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0016_auto_20210701_1618.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/car/migrations/0017_auto_20210701_1619.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/car/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/car/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/car/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/admin.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/apps.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/migrations/0001_initial.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/migrations/0002_alter_content_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/migrations/0003_alter_cimages_image.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/migrations/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/models.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/tests.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/urls.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/views.py" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0002_alter_setting_title.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0002_alter_setting_title.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0003_auto_20210508_2205.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0003_auto_20210508_2205.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0004_auto_20210510_0113.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0004_auto_20210510_0113.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0005_alter_contactformmessage_status.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0005_alter_contactformmessage_status.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/migrations/0006_auto_20210630_2126.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/migrations/0006_auto_20210630_2126.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/nouislider.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/nouislider.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/bridge-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/bridge-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/dark-red-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/dark-red-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/default-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/default-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/green-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/green-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/orange-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/orange-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/pink-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/pink-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/purple-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/purple-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/red-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/red-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/violet-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/violet-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/css/theme-color/yellow-theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/css/theme-color/yellow-theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/js/nouislider.js" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/js/nouislider.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/base/_base.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/base/_base.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/base/_mixins.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/base/_mixins.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/base/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/base/_variables.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/layouts/_footer.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/layouts/_footer.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/layouts/_header.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/layouts/_header.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/layouts/_nav.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/layouts/_nav.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/modules/_buttons.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/modules/_buttons.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/modules/_responsive.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/modules/_responsive.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/modules/_sections.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/modules/_sections.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/modules/_theme-color.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/modules/_theme-color.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/modules/_typography.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/modules/_typography.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/static/scss/style.scss" beforeDir="false" afterPath="$PROJECT_DIR$/home/static/scss/style.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/aboutus.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/aboutus.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/car_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/car_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/cars.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/cars.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/cars_search.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/cars_search.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/contact.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/contact.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/content.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/content_detail.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/error_page.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/error_page.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/header.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/homebase.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/homebase.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/references.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/references.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/signup.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/templates/slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/home/templates/slider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/home/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/home/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/apps.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/apps.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/change_password.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/change_password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_addcontents.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_contents.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/user/templates/user_panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_panel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_profile.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/templates/user_update.html" beforeDir="false" afterPath="$PROJECT_DIR$/user/templates/user_update.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -235,7 +148,7 @@
       <workItem from="1625075430518" duration="33465000" />
       <workItem from="1625146984096" duration="35000" />
       <workItem from="1625147498650" duration="7000" />
-      <workItem from="1625147580340" duration="9228000" />
+      <workItem from="1625147580340" duration="15413000" />
     </task>
     <servers />
   </component>
