@@ -8,7 +8,6 @@ from django.core.serializers import json
 # Create your views here.
 import car
 from car.models import Car, Category, Images
-from content.models import Content, Menu, CImages
 from home.forms import SearchForm, SignUpForm
 from home.models import Setting, ContactFormu, ContactFormMessage, UserProfile
 
@@ -17,13 +16,11 @@ def index(request):
     setting = Setting.objects.get(pk=1)
     sliderdata = Car.objects.all()[:5]
     category = Category.objects.all()
-    menu = Menu.objects.all()
     lastcars = Car.objects.all().order_by('-id')[:4]
     context = {'setting': setting,
                'category': category,
                'page': 'home',
                'car': car,
-               'menu': menu,
                'sliderdata': sliderdata,
                'lastcars': lastcars}
     return render(request, 'index.html', context)
@@ -32,16 +29,14 @@ def index(request):
 def aboutus(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    menu = Menu.objects.all()
-    context = {'setting': setting, 'page': 'aboutus', 'category': category, 'menu': menu}
+    context = {'setting': setting, 'page': 'aboutus', 'category': category}
     return render(request, 'aboutus.html', context)
 
 
 def references(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    menu = Menu.objects.all()
-    context = {'setting': setting, 'page': 'references', 'category': category, 'menu': menu,}
+    context = {'setting': setting, 'page': 'references', 'category': category}
     return render(request, 'references.html', context)
 
 
@@ -60,21 +55,18 @@ def contact(request):
             return HttpResponseRedirect('/contact')
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    menu = Menu.objects.all()
     form = ContactFormu()
-    context = {'setting': setting, 'form': form, 'category': category, 'menu': menu,}
+    context = {'setting': setting, 'form': form, 'category': category}
     return render(request, 'contact.html', context)
 
 
 def category_cars(request, id, slug):
     category = Category.objects.all()
     categorydata = Car.objects.filter(pk=id)
-    menu = Menu.objects.all()
     cars = Car.objects.filter(category_id=id)
     context = {'cars': cars,
                'category': category,
                'categorydata ': categorydata,
-               'menu': menu,
                }
     return render(request, 'cars.html', context)
 
@@ -86,12 +78,10 @@ def car_detail(request,id,slug):
         images = Images.objects.filter(car_id=id)
         setting = Setting.objects.get(pk=1)
         lastcars = Car.objects.all().order_by('-id')[:4]
-        menu = Menu.objects.all()
         context = {
             'car': car,
             'category': category,
             'images': images,
-            'menu':menu,
             'setting': setting,
             'lastcars': lastcars,
             }
@@ -112,11 +102,9 @@ def car_search(request):
                 cars = Car.objects.filter(title__icontains=query)
             else:
                 cars = Car.objects.filter(title__icontains=query, category_id=catid)
-            menu = Menu.objects.all()
             setting = Setting.objects.get(pk=1)
             context = {'cars': cars,
                        'category': category,
-                       'menu':menu,
                        'setting': setting}
             return render(request, 'cars_search.html', context)
     return HttpResponseRedirect('/')
@@ -183,36 +171,10 @@ def signup_view(request):
     return render(request, 'signup.html', context)
 
 
-def menu(request, id):
-    try:
-        content = Content.objects.get(menu_id=id)
-        link = '/content/' + str(content.id) + '/menu'
-        return HttpResponseRedirect(link)
-    except:
-        messages.warning(request, " Hata! İlgili içerik bulunamadı")
-        link = '/error'
-        return HttpResponseRedirect(link)
-
-
-def contentdetail(request, id, slug):
-    category = Category.objects.all()
-    menu = Menu.objects.all()
-    content = Content.objects.get(pk=id)
-    setting = Setting.objects.get(pk=1)
-    images = CImages.objects.filter(content_id=id)
-    context = {'content': content,
-               'category': category,
-               'menu': menu,
-               'images': images,
-               'setting': setting}
-    return render(request, 'content_detail.html', context)
-
 def error(request):
     setting = Setting.objects.get(pk=1)
     category = Category.objects.all()
-    menu = Menu.objects.all()
     context = {'category': category,
-               'menu': menu,
                'setting': setting}
     return render(request, 'error_page.html', context)
 

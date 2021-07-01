@@ -28,26 +28,6 @@
                             </li>
                         {% endif %}
                     {% endrecursetree %}
-                    <li>
-                        <a>MENU</a>
-                        {% if menu %}
-                            <ul>
-                                {% recursetree menu %}
-                                    <li>
-                                        <a  class="dropdown" href="/menu/{{ node.id }}/{{ node.slug }}">{{ node.title }}</a>
-                                        {% if not node.is_leaf_node %}
-                                            <li class="dropdown">
-                                                <ul class="dropdown-menu" role="menu">
-                                                    {{ children }}
-                                                </ul>
-                                            </li>
-                                        {% endif %}
-                                    </li>
-                                {% endrecursetree %}
-                            </ul>
-                        {% endif %}
-                    </li>
-
 
                     <li><a href="/aboutus">ABOUT US</a></li>
                     <li><a href="/contact">CONTACT</a></li>
@@ -58,8 +38,7 @@
                             <img src="{{request.user.profile.image.url}}">
                             <ul>
                                 <li><a href="/user">Hesabım</a></li>
-                                <li><a href="/user/contents">İçeriklerim</a></li>
-                                <li><a href="/user/advertisements">İlanlarım</a></li>
+                                <li><a href="/user/contents">İlanlarım</a></li>
                                 <li><a href="/logout">Çıkış Yap</a></li>
                             </ul>
                         {% else %}

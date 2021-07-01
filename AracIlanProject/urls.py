@@ -27,7 +27,7 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('car/', include('car.urls')),
     path('admin/', admin.site.urls),
-    path('content/', include('content.urls')),
+
 
     path('aboutus/', views.aboutus, name='aboutus'),
     path('references/', views.references, name='references'),
@@ -36,8 +36,7 @@ urlpatterns = [
 
     path('category/<int:id>/<slug:slug>/', views.category_cars, name='category_cars'),
     path('car/<int:id>/<slug:slug>/', views.car_detail, name='car_detail'),
-    path('content/<int:id>/<slug:slug>/', views.contentdetail, name='content_detail'),
-    path('menu/<int:id>/', views.menu, name='menu'),
+
 
     path('search/', views.car_search, name='car_search'),
     path('search_auto/', views.car_search_auto, name='car_search_auto'),
