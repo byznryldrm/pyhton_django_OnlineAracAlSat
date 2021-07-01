@@ -84,20 +84,17 @@ def car_detail(request,id,slug):
     try:
         car = Car.objects.get(pk=id)
         images = Images.objects.filter(car_id=id)
-        randomcars = Car.objects.all().order_by('?')[:4]
-        comments = Comment.objects.filter(car_id=id,status='True')
         setting = Setting.objects.get(pk=1)
-        current_user = request.user
-        profile = UserProfile.objects.get(user_id=current_user.id)
+        lastcars = Car.objects.all().order_by('-id')[:4]
         menu = Menu.objects.all()
-        context = {'car': car,
+        context = {
+            'car': car,
             'category': category,
             'images': images,
-            'randomcars': randomcars,
-            'comments': comments,
             'menu':menu,
             'setting': setting,
-            'profile': profile}
+            'lastcars': lastcars,
+            }
         return render(request, 'car_detail.html', context)
     except:
         messages.warning(request, " Hata! İlgili içerik bulunamadı")
@@ -197,25 +194,18 @@ def menu(request, id):
         return HttpResponseRedirect(link)
 
 
-def contentdetail(request,id,slug):
+def contentdetail(request, id, slug):
     category = Category.objects.all()
     menu = Menu.objects.all()
-    try:
-        content = Content.objects.get(pk=id)
-        setting = Setting.objects.get(pk=1)
-        images = CImages.objects.filter(content_id=id)
-        context = {'content': content,
-                   'category': category,
-                   'menu': menu,
-                   'images': images,
-                   'setting': setting}
-        return render(request, 'content_detail.html', context)
-
-    except:
-        messages.warning(request, " Hata! İlgili içerik bulunamadı")
-        link = '/error'
-        return HttpResponseRedirect(link)
-
+    content = Content.objects.get(pk=id)
+    setting = Setting.objects.get(pk=1)
+    images = CImages.objects.filter(content_id=id)
+    context = {'content': content,
+               'category': category,
+               'menu': menu,
+               'images': images,
+               'setting': setting}
+    return render(request, 'content_detail.html', context)
 
 def error(request):
     setting = Setting.objects.get(pk=1)
